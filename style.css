@@ -14,7 +14,11 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 56px;
+    
     padding: 0 16px;
+}
+.navbar i:hover, .logo img:hover {
+    cursor: pointer;
 }
 .navbar .logo {
     display: flex;
@@ -25,7 +29,6 @@ body {
     width: 129px;
     margin-left: 14px;
 }
-
 .navbar .search-bar {
     display: flex;
     height: 32px;
