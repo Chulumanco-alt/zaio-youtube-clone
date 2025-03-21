@@ -14,7 +14,6 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 56px;
-    
     padding: 0 16px;
 }
 .navbar i:hover, .logo img:hover {
@@ -24,6 +23,7 @@ body {
     display: flex;
     align-items: center;
     margin-left: 8px;
+    position: relative;
 }
 .logo img {
     width: 129px;
@@ -34,7 +34,7 @@ body {
     height: 32px;
     align-items: center;
 }
-.navigation-icons {
+.navigation-icons, .details2, .tablist {
     display: flex;
 }
 .search {
@@ -44,15 +44,18 @@ body {
     height: 100%;
     margin-right: 10px;
     padding-left: 5px;
+    background-color: #121212;
 }
 .search input {
     border: none; 
     width: 90%;
+    background-color: #121212;
 }
 .search button {
     border: none;
     border-left: 1px solid #d0d0d0;
     width: 10%;
+    background-color: hsl(0deg 0% 13.33%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,6 +63,7 @@ body {
 .search button i {
     margin: 0;
     padding: 2px;
+    color: white;
 }
 .material-icons {
     color: #606060;
@@ -68,7 +72,6 @@ body {
 .mainbody {
     display: flex;
     height: calc(100vh - 56px);
-    /* overflow: hidden; */
 }
 .categories {
     width: 240px;
@@ -108,7 +111,7 @@ body {
 .active i {
     color: red; 
 }
-.category i {
+.category i, .category svg {
     margin-right: 24px;
 }
 .active:hover {
@@ -133,20 +136,35 @@ body {
     font-weight: 400;
     margin-bottom: 20px;
 }
+.tablist {
+    position: fixed;
+    background-color: white;
+    padding: 12px 0px;
+    width: 100%; 
+}
+.tablist span {
+    color: white;
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 0px 5px;
+    background-color: hsl(0deg 0% 15.29%);
+    border-radius: 10px;
+}
 .videos {
     width: calc(100vw - 240px);
     height: 100%;
     background: #f9f9f9;
-    border-top: 1px solid #cccccc;
     overflow-y: scroll;
 }
 .video-grid {
     display: flex;
-    padding: 15px;
+    padding: 15px 0px 15px 15px;
     flex-wrap: wrap;
+    margin: 0;
+    margin-top: 50px;
 }
 .video {
-    width: calc(25% - 12px);
+    width: 32%;
     margin-right: 12px;
     margin-bottom: 12px;
     cursor: pointer;
@@ -163,6 +181,7 @@ body {
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
+    width: 296px;
 }
 .video .posted-by, .view-date {
     font-size: 14px;
@@ -186,3 +205,4 @@ body {
     display: flex;
     font-size: 14px;
 }
+
