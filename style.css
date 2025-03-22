@@ -14,9 +14,10 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 56px;
+    background-color:rgb(15 15 15);
     padding: 0 16px;
 }
-.navbar i:hover, .logo img:hover {
+.navbar i:hover, .logo img:hover, .create, .tablist .material-icons {
     cursor: pointer;
 }
 .navbar .logo {
@@ -29,31 +30,60 @@ body {
     width: 129px;
     margin-left: 14px;
 }
+.logo sup {
+    height: 36px;
+    font-size: 12px;;
+}
 .navbar .search-bar {
     display: flex;
     height: 32px;
     align-items: center;
 }
-.navigation-icons, .details2, .tablist {
+.navigation-icons, .details2, .tablist, .category-heading1, .create {
     display: flex;
+}
+.navigation-icons i, .create, .logo {
+    margin-right: 20px;
+}
+.navigation-icons i {
+    width: 40px;
+    font-size: 28px;
+    margin-top: 5px;
+}
+.navigation-icons img {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    margin: 5px 10px 0px 0px;
+    border-radius: 50%;
+}
+.navigation-icons, .search, .logo {
+    margin-bottom: 10px;
 }
 .search {
     display: flex;
-    border: 1px solid #d0d0d0;
+    border: 1px solid rgb(48 48 48);
     width: 640px;
-    height: 100%;
-    margin-right: 10px;
-    padding-left: 5px;
+    height: 43px;
+    margin: 3px 0px 0px 10px;
+    padding-left: 15px;
+    border-radius: 20px;
     background-color: #121212;
 }
 .search input {
     border: none; 
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     width: 90%;
+    color: white;
+    padding: 0px;
     background-color: #121212;
 }
 .search button {
     border: none;
-    border-left: 1px solid #d0d0d0;
+    border-left: 1px solid rgb(48 48 48);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     width: 10%;
     background-color: hsl(0deg 0% 13.33%);
     display: flex;
@@ -65,9 +95,31 @@ body {
     padding: 2px;
     color: white;
 }
-.material-icons {
-    color: #606060;
-    margin-right: 10px;
+.search-bar i {
+    border-radius: 50%;
+    background-color: hsl(0deg 0% 13.33%);
+    padding: 8px;
+    margin-left: 20px;
+}
+.create {
+    color: white;
+    background-color: hsl(0deg 0% 13.33%);
+    padding: 7px 14px 7px 6px;
+    border-radius: 30px;
+} 
+.create p {
+    font-size: 14px;
+    margin: 4px 5px 0px 5px;
+}
+.category-heading1 i, .navigation-icons {
+    margin-top: 7px;
+}
+.tablist .material-icons {
+    padding-top: 3px;
+    margin-left: 12px;
+}
+.tablist .material-icons:hover {
+    border-radius: 50%;
 }
 .mainbody {
     display: flex;
@@ -77,19 +129,26 @@ body {
     width: 240px;
     height: 100%;
     overflow-y: scroll;
+    background-color:rgb(15 15 15);
 }
 .category-section {
-    border-bottom: 0.1px solid #cccccc;
+    border-bottom: 0.1px solid #3f3f3f;
     margin-top: 10px;
+    margin: 10px 10px 0px 5px;
 }
 .category-section .category:last-child {
     margin-bottom: 10px;
 }
 .category-heading {
     margin: 10px 0px 10px 25px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
-    color: #606060;
+    color: white;
+}
+.category-heading1 .category-heading {
+    width: 34px;
+    color: white;
+    font-weight: 500;
 }
 .category {
     width: 100%;
@@ -98,24 +157,34 @@ body {
     height: 40px;
     padding: 0 24px;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 300;
     cursor: pointer;
+    color: white;
 }
-.category:hover {
-    background: #f9f9f9;
+.category:hover, .category-heading1:hover, .active {
+    background: #272727;
+    border-radius: 12px;
+    margin-left: 15px;
+    padding: 8px;
+    max-width: 80%;
+}
+.category-heading1:hover {
+   padding: 0px 0px 0px 0px;
+}
+.active i, .category-heading1 i, .logo i, .navigation-icons i, .search-bar i, .details, .tablist .material-icons, .video .posted-by:hover {
+    color: white;
 }
 .active {
-    background-color: #d0d0d0;
     font-weight: 500;
 }
-.active i {
-    color: red; 
-}
-.category i, .category svg {
+.category i, .category svg, .logo i {
     margin-right: 24px;
 }
-.active:hover {
-    background-color: #d0d0d0;
+.category-section:nth-child(3) svg {
+    margin-right: 20px;
+}
+.active:hover, .search-bar i:hover, .tablist .material-icons:hover, .create:hover {
+    background-color: #414141;
 }
 .categories-footer {
    padding: 25px;
@@ -138,8 +207,8 @@ body {
 }
 .tablist {
     position: fixed;
-    background-color: white;
-    padding: 12px 0px;
+    background-color: rgb(15 15 15);
+    padding: 14px 0px;
     width: 100%; 
 }
 .tablist span {
@@ -153,7 +222,7 @@ body {
 .videos {
     width: calc(100vw - 240px);
     height: 100%;
-    background: #f9f9f9;
+    background:rgb(15 15 15);
     overflow-y: scroll;
 }
 .video-grid {
@@ -176,17 +245,18 @@ body {
 }
 .video .thumbnail img {
     width: 100%;
+    border-radius: 18px;
 }
 .video .video-details p {
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
-    width: 296px;
+    width: 300px;
 }
 .video .posted-by, .view-date {
     font-size: 14px;
-    font-weight: 500;
-    color: #606060;
+    font-weight: 400;
+    color: #aaaaaa;
 }
 .video .profile {
     margin-right: 12px;
