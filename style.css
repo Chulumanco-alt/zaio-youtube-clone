@@ -241,7 +241,15 @@ body {
 .video .details {
     display: flex;
     margin: 5px;
-    width: 90%;
+    margin-right: 0;
+    width: 100%;
+}
+.details {
+    position: relative;
+}
+.dots {
+    position: absolute;
+    right: 0;
 }
 .video .thumbnail img {
     width: 100%;
